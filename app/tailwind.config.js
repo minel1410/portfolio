@@ -17,6 +17,10 @@ module.exports = {
       'White': '#e6f1ff',
       'Green': '#64ffda'
     },
+    fontFamily: {
+        'calibre': ['Calibre', 'sans-serif'],
+        'sf-mono': ['SFMono', 'sans-serif']
+      }
     },
     
   },
