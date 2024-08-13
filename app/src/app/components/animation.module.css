@@ -1,0 +1,216 @@
+/* animation.module.css */
+
+/* animation.module.css */
+
+#animationBody {
+  padding: 0;
+  margin: 0;
+  width: 100vw; /* Koristite 100vw da pokrijete celo vidljivo područje prozora */
+  height: 100vh; /* Koristite 100vh da pokrijete celo vidljivo područje prozora */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #020C1B;
+  position: fixed; /* Da bi animacija pokrivala ceo ekran */
+  top: 0;
+  left: 0;
+  z-index: 9999; /* Osigurajte da animacija bude iznad svega ostalog */
+}
+
+/* Dodajte ovde ostatak vašeg CSS-a */
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: scale(1);
+  animation: fadeOutZoom 1s ease forwards;
+  animation-delay: 2.2s;
+}
+
+@keyframes fadeOutZoom {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+}
+
+.div {
+  position: absolute;
+  width: 250px;
+  height: 145px;
+}
+
+.m {
+  margin-bottom: 10px;
+  color: #64ffda;
+  font-size: 100px;
+  font-weight: 400;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  opacity: 0;
+  animation: zoomIn 0.85s ease forwards;
+  animation-delay: 1.8s;
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.div:nth-of-type(2) {
+  transform: rotate(60deg);
+}
+
+.div:nth-of-type(3) {
+  transform: rotate(-60deg);
+}
+
+.div div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.div div span {
+  position: absolute;
+  width: 4px;
+  height: 0%;
+  background: #64ffda;
+  z-index: 999999;
+}
+
+.h1 {
+  left: 0;
+  border-radius: 10px;
+  animation: load1 3.5s ease forwards;
+}
+
+.h2 {
+  right: 0;
+  border-radius: 10px;
+  animation: load2 3.5s ease 0.25s forwards;
+}
+
+.h3 {
+  right: 0;
+  border-radius: 10px;
+  animation: load3 3.5s ease 0.5s forwards;
+}
+
+.h4 {
+  right: 0;
+  border-radius: 10px;
+  animation: load4 3.5s ease 0.75s forwards;
+}
+
+.h5 {
+  left: 0;
+  border-radius: 10px;
+  animation: load5 3.5s ease 1s forwards;
+}
+
+.h6 {
+  left: 0;
+  border-radius: 10px;
+  animation: load6 3.5s ease 1.25s forwards;
+}
+
+@keyframes load1 {
+  0% {
+    bottom: 0;
+    height: 0;
+  }
+  6.944444444% {
+    bottom: 0;
+    height: 100%;
+  }
+  100% {
+    bottom: 0;
+    height: 100%;
+  }
+}
+
+@keyframes load2 {
+  0% {
+    top: 0;
+    height: 0;
+  }
+  6.944444444% {
+    top: 0;
+    height: 100%;
+  }
+  100% {
+    top: 0;
+    height: 100%;
+  }
+}
+
+@keyframes load3 {
+  0% {
+    top: 0;
+    height: 0;
+  }
+  6.944444444% {
+    top: 0;
+    height: 100%;
+  }
+  100% {
+    top: 0;
+    height: 100%;
+  }
+}
+
+@keyframes load4 {
+  0% {
+    top: 0;
+    height: 0;
+  }
+  6.944444444% {
+    top: 0;
+    height: 100%;
+  }
+  100% {
+    top: 0;
+    height: 100%;
+  }
+}
+
+@keyframes load5 {
+  0% {
+    bottom: 0;
+    height: 0;
+  }
+  6.944444444% {
+    bottom: 0;
+    height: 100%;
+  }
+  100% {
+    bottom: 0;
+    height: 100%;
+  }
+}
+
+@keyframes load6 {
+  0% {
+    bottom: 0;
+    height: 0;
+  }
+  6.944444444% {
+    bottom: 0;
+    height: 100%;
+  }
+  100% {
+    bottom: 0;
+    height: 100%;
+  }
+}

@@ -7,6 +7,34 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+                "fade-in": {
+                    "0%": {
+                        opacity: 0
+                    },
+                    "100%": {
+                        opacity: 1
+                    },
+                },
+                "fade-out": {
+                    "0%": {
+                        opacity: 1
+                    },
+                    "100%": {
+                        opacity: 0
+                    },
+                },
+                "fade-in-down": {
+                    "0%": {
+                        opacity: 0,
+                        transform: "translate3d(0, -100%, 0)",
+                    },
+                    "100%": {
+                        opacity: 1,
+                        transform: "translate3d(0, 0, 0)",
+                    },
+                },
+              },
       colors: {
       'Navy': '#0a192f',
       'LightNavy': '#112240',

@@ -1,10 +1,23 @@
-import Image from "next/image";
+"use client";
+
+import React, { useState } from "react";
+import LoadingAnimation from "./components/loadAnimation";
+import { motion } from "framer-motion";
+import "./globals.css";
 
 export default function Home() {
-  return (
-    <div>
-      <h1 className="font-sf-mono text-3xl font-extrabold">Minel Salihagić</h1>
+  const [isAnimationFinished, setAnimationFinished] = useState(false);
 
-    </div>
+  return (
+    <>
+      {!isAnimationFinished && (
+        <LoadingAnimation
+          onAnimationFinish={() => setAnimationFinished(true)}
+        />
+      )}
+      {isAnimationFinished && (
+        <div>Content</div>
+      )}
+    </>
   );
 }
