@@ -16,7 +16,7 @@ const LoadingAnimation = ({ onAnimationFinish }) => {
       <section className={styles.container}>
         <div className={styles.div}>
           <div>
-            <span className={`${styles.one} ${styles.h6}`}></span>
+            <span className={`${styles.one} ${styles.h6} font-black`}></span>
             <span className={`${styles.two} ${styles.h3}`}></span>
           </div>
         </div>

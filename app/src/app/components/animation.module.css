@@ -43,8 +43,8 @@
 
 .div {
   position: absolute;
-  width: 250px;
-  height: 145px;
+  width: 200px;
+  height: 119px;
 }
 
 .m {
@@ -52,7 +52,7 @@
   color: #64ffda;
   font-size: 100px;
   font-weight: 400;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Calibre', sans-serif;
   opacity: 0;
   animation: zoomIn 0.85s ease forwards;
   animation-delay: 1.8s;
@@ -83,7 +83,7 @@
 
 .div div span {
   position: absolute;
-  width: 4px;
+  width: 12px;
   height: 0%;
   background: #64ffda;
   z-index: 999999;
