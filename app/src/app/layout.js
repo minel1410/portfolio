@@ -1,6 +1,7 @@
 
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata = {
   title: "Minel Salihagić",
@@ -43,6 +44,7 @@ const RootLayout = ({ children }) => {
     <html lang="en">
       {children}
       <Analytics></Analytics>
+      <SpeedInsights></SpeedInsights>
     </html>
   );
 };
