@@ -42,13 +42,15 @@ const Navbar = () => {
       }`}
     >
       <motion.div
-        className="text-4xl text-Green"
+        className="text-4xl text-Green flex w-[60px] h-[60px] justify-center items-center bg-Green mask mask-hexagon"
         initial={{ opacity: 0, y: -20 }} // Spuštanje odozgo
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2, delay: 3.4 }}
         viewport={{ once: true, amount: 0.1 }}
       >
-        M
+          <div className="w-14 h-14 bg-Navy mask mask-hexagon flex items-center justify-center">
+            M
+          </div>
       </motion.div>
 
       <div className="gap-7 items-center font-sf-mono text-Green hidden md:flex">
@@ -202,7 +204,6 @@ export default function Home() {
 
   return (
     <body className="bg-Navy w-full flex flex-col">
-      
       <Navbar />
       <div className="w-full flex h-[400vh]">
         <motion.div
@@ -251,26 +252,28 @@ export default function Home() {
               />
             )}
             {isAnimationFinished && (
-              <>
-                <p className="text-md text-Green font-sf-mono">
-                  Hi, my name is
-                </p>
-                <div className="text-5xl font-calibre text-White font-semibold mt-8">
-                  Minel Salihagić.
+
+                <div
+                >
+                  <p className="text-md text-Green font-sf-mono">
+                    Hi, my name is
+                  </p>
+                  <div className="text-5xl font-calibre text-White font-semibold mt-8">
+                    Minel Salihagić.
+                  </div>
+                  <div className="text-4xl font-calibre text-Slate font-semibold mt-3">
+                    I build things for the web
+                  </div>
+                  <div className="text-md text-Slate font-calibre font-normal mt-5">
+                    I’m a software engineer specializing in building and
+                    occasionally designing exceptional digital experiences.
+                    Currently, I’m focused on building accessible,
+                    human-centered products at Upstatement.
+                  </div>
+                  <div className="p-4 text-Green font-sf-mono mt-10 border rounded-md border-Green transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[5px_5px_0px_0px_rgba(100,255,218,1)] cursor-pointer">
+                    Check out my course!
+                  </div>
                 </div>
-                <div className="text-4xl font-calibre text-Slate font-semibold mt-3">
-                  I build things for the web
-                </div>
-                <div className="text-md text-Slate font-calibre font-normal mt-5">
-                  I’m a software engineer specializing in building (and
-                  occasionally designing) exceptional digital experiences.
-                  Currently, I’m focused on building accessible, human-centered
-                  products at Upstatement.
-                </div>
-                <motion.div className="p-4 text-Green font-sf-mono mt-10 border rounded-md border-Green transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[5px_5px_0px_0px_rgba(100,255,218,1)] cursor-pointer">
-                  Check out my course!
-                </motion.div>
-              </>
             )}
           </>
         </div>
