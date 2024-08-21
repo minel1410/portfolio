@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen bg-Navy px-6 md:px-12">
+    <div className="w-full h-screen bg-Navy px-6 md:px-12 py-4">
       <nav className="w-full flex justify-between items-center h-1/6">
         <div className="w-20 h-20">
           <div className="absolute w-[70px] h-[70px] mask mask-hexagon bg-Green flex items-center justify-center hover z-40 transition-all hover:-translate-x-1 hover:-translate-y-1">
@@ -16,7 +16,7 @@ export default function Home() {
         </div>
       </nav>
       <div className="w-full h-5/6 flex flex-col gap-1 items-center justify-center text-center">
-        <h1 className="text-Green font-calibre font-light text-6xl md:text-8xl">
+        <h1 className="text-Green font-calibre font-light text-5xl sm:text-6xl md:text-8xl">
           UNDER CONSTRUCTION
         </h1>
         <p className="text-Slate text-md md:text-lg lg:text-xl font-calibre">
@@ -57,7 +57,7 @@ export default function Home() {
           </a>
         </div>
 
-        <p className="absolute bottom-4 text-Slate font-calibre text-xl">
+        <p className="absolute bottom-8 text-Slate font-calibre text-xl">
           minelsalihagic@gmail.com
         </p>
       </div>
