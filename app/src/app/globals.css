@@ -6,23 +6,23 @@
 /* *{
   border: solid 1px red;
 } */
-/* globals.css */
+
 @font-face {
   font-family: 'Calibre';
   font-weight: 300;
   font-style: normal;
-  src: url('/fonts/Calibre/Calibre-Light.woff2') format('woff2'),
-       url('/fonts/Calibre/Calibre-Light.woff') format('woff'),
-       url('/fonts/Calibre/Calibre-Light.ttf') format('truetype');
+  src: url('../fonts/Calibre/Calibre-Light.woff2') format('woff2'),
+       url('../fonts/Calibre/Calibre-Light.woff') format('woff'),
+       url('../fonts/Calibre/Calibre-Light.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Calibre';
   font-weight: 300;
   font-style: italic;
-  src: url('/fonts/Calibre/Calibre-LightItalic.woff2') format('woff2'),
-       url('/fonts/Calibre/Calibre-LightItalic.woff') format('woff'),
-       url('/fonts/Calibre/Calibre-LightItalic.ttf') format('truetype');
+  src: url('../fonts/Calibre/Calibre-LightItalic.woff2') format('woff2'),
+       url('../fonts/Calibre/Calibre-LightItalic.woff') format('woff'),
+       url('../fonts/Calibre/Calibre-LightItalic.ttf') format('truetype');
 }
 
 @font-face {
