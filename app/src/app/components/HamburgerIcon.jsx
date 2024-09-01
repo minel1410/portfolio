@@ -2,9 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import { MotionConfig, motion } from "framer-motion";
-import FeatherIcon from "feather-icons-react";
-
-
 
 const VARIANTS = {
   top: {
@@ -39,8 +36,7 @@ const VARIANTS = {
   },
 };
 
-const Hamburger = () => {
-  const [active, setActive] = useState(false);
+const HamburgerIcon = ({ active, onclick }) => {
 
   return (
     <MotionConfig
@@ -50,9 +46,12 @@ const Hamburger = () => {
       }}
     >
       <motion.button
-        initial={false}
+        initial={{ opacity: 0, y: -35 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2, delay: 0 }}
+        viewport={{ once: true }}
         animate={active ? "open" : "closed"}
-        onClick={() => setActive((pv) => !pv)}
+        onClick={onclick}
         className="relative h-16 w-12 md:hidden z-50"
       >
         <motion.span
@@ -76,21 +75,8 @@ const Hamburger = () => {
           }}
         />
       </motion.button>
-
-      <motion.div
-        className="fixed top-0 left-0 w-full h-full z-40 flex md:hidden"
-        initial={{ x: "-100%" }}
-        animate={active ? { x: 0 } : { x: "100%" }}
-        transition={{
-          ease: "easeOut",
-          duration: 0.3,
-        }}
-      >
-        <div className="w-1/4 sm:w-1/2 bg-Navy/30 backdrop-blur-md shadow-lg"></div>
-        <div className="w-3/4 sm:w-1/2 bg-LightNavy z-30 h-full flex justify-center items-center">Test123</div>
-      </motion.div>
     </MotionConfig>
   );
 };
 
-export { Hamburger };
+export default HamburgerIcon;

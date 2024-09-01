@@ -1,9 +1,8 @@
+import { LeftPane, RightPane } from "./components/LeftPane";
+import { Navbar } from "./components/Navbar";
+import "./globals.css"
 
-import { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-
-export const metadata = {
+/* export const metadata = {
   title: "Minel Salihagić",
   description:
     "Welcome to the official website of Minel Salihagić, Software Developer and Engineer. Explore projects, skills, and find contact information.",
@@ -37,18 +36,26 @@ export const metadata = {
       },
     ],
   },
-};
+}; */
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      {children}
-      <Analytics></Analytics>
-      <SpeedInsights></SpeedInsights>
+      <body>
+        <Navbar />
+        <div className="flex bg-Navy">
+          <LeftPane />
+          <div className="bg-Navy w-full min-h-screen md:w-10/12 md:ml-[8.33333333%] pt-28 px-4 flex">
+            
+          </div>
+          <RightPane />
+        </div>
+      </body>
+
+      {/* <Analytics></Analytics>
+      <SpeedInsights></SpeedInsights> */}
     </html>
   );
 };
-
-
 
 export default RootLayout;
