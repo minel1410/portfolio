@@ -45,8 +45,8 @@ const RootLayout = ({ children }) => {
         <Navbar />
         <div className="flex bg-Navy">
           <LeftPane />
-          <div className="bg-Navy w-full min-h-screen md:w-10/12 md:ml-[8.33333333%] pt-28 px-4 flex">
-            
+          <div className="bg-Navy w-full md:w-10/12 md:ml-[8.33333333%] pt-28 px-6">
+            {children}
           </div>
           <RightPane />
         </div>
