@@ -2,6 +2,9 @@
 
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import FeatherIcon from "feather-icons-react";
+import Hexagon from "./Hexagon";
 
 
 
@@ -71,7 +74,69 @@ const Sidebar = ({ active }) => {
       >
         <div className="w-1/4 sm:w-1/2 bg-Navy/30 backdrop-blur-md"></div>
         <div className="w-3/4 sm:w-1/2 bg-LightNavy z-30 h-full flex justify-center items-center">
-          Test123
+          <div className="w-full flex flex-col gap-3">
+            <div className="w-full flex justify-center h-24">
+
+            </div>
+            <div className="w-full p-3 flex flex-col items-center justify-center">
+              <p className="font-sf-mono text-Green text-lg">01.</p>
+              <p className="font-calibre text-Slate text-2xl">About</p>
+            </div>
+            <div className="w-full p-3 flex flex-col items-center justify-center">
+              <p className="font-sf-mono text-Green text-lg">01.</p>
+              <p className="font-calibre text-Slate text-2xl">About</p>
+            </div>
+            <div className="w-full p-3 flex flex-col items-center justify-center">
+              <p className="font-sf-mono text-Green text-lg">01.</p>
+              <p className="font-calibre text-Slate text-2xl">About</p>
+            </div>
+            <div className="w-full p-3 flex flex-col items-center justify-center">
+              <p className="font-sf-mono text-Green text-lg">01.</p>
+              <p className="font-calibre text-Slate text-2xl">About</p>
+            </div>
+          </div>
+          <div className="absolute bottom-24 flex justify-around w-2/3 sm:w-1/2">
+            <Link
+              href="https://github.com/minel1410"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub Profile"
+              className="text-Slate w-6 h-6 stroke-current transition-all duration-300 ease-in-out transform hover:translate-y-[-5px] hover:cursor-pointer hover:text-Green"
+            >
+              <FeatherIcon icon="github" strokeWidth="2" />
+            </Link>
+
+            {/* External links for social profiles */}
+            <Link
+              href="https://instagram.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram Profile"
+              className="text-Slate w-6 h-6 stroke-current transition-all duration-300 ease-in-out transform hover:translate-y-[-5px] hover:cursor-pointer hover:text-Green"
+            >
+              <FeatherIcon icon="instagram" strokeWidth="2" />
+            </Link>
+
+            <Link
+              href="https://linkedin.com/in/minel-salihagi%C4%87-9ba401300/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+              className="text-Slate w-6 h-6 stroke-current transition-all duration-300 ease-in-out transform hover:translate-y-[-5px] hover:cursor-pointer hover:text-Green"
+            >
+              <FeatherIcon icon="linkedin" strokeWidth="2" />
+            </Link>
+
+            <Link
+              href="https://twitter.com/yourusername"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter Profile"
+              className="text-Slate w-6 h-6 stroke-current transition-all duration-300 ease-in-out transform hover:translate-y-[-5px] hover:cursor-pointer hover:text-Green"
+            >
+              <FeatherIcon icon="twitter" strokeWidth="2" />
+            </Link>
+          </div>
         </div>
       </motion.div>
     </>
