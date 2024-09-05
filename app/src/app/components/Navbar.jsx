@@ -59,10 +59,12 @@ const Navbar = () => {
             transition={{ duration: 0.2, delay: 0 }}
             viewport={{ once: true, amount: 0.1 }}
           >
-            <p className="text-Green">01.</p>
-            <p className="text-LightestSlate group-hover:text-Green transition-all">
-              About
-            </p>
+            <Link href={'#aboutme'} className="flex">
+              <p className="text-Green">01.</p>
+              <p className="text-LightestSlate group-hover:text-Green transition-all">
+                About
+              </p>
+            </Link>
           </motion.div>
           <motion.div
             className="text-sm flex items-center gap-2 group hover:cursor-pointer"
@@ -108,12 +110,13 @@ const Navbar = () => {
             viewport={{ once: true, amount: 0.1 }}
           >
             <Link
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="My Resume"
-          
-        >Resume</Link>
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="My Resume"
+            >
+              Resume
+            </Link>
           </motion.div>
         </div>
         <HamburgerIcon
