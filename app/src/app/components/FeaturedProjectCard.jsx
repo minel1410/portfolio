@@ -15,7 +15,7 @@ const FeaturedProjectCard = ({
         className={`w-full h-96 bg-cover bg-center relative shadow-md mt-5`}
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="absolute inset-0 bg-[#0D2034] bg-opacity-80 flex flex-col p-6 sm:p-8 group-hover:bg-opacity-60 transition-all">
+        <div className="absolute inset-0 bg-[#0D2034] bg-opacity-[92%] flex flex-col justify-between p-6 sm:p-8 group-hover:bg-opacity-[85%] transition-all">
           <p className="font-sf-mono text-Green font-bold">Featured Project</p>
           <Link
             href={hostedLink || "#"}

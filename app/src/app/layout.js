@@ -1,3 +1,4 @@
+import Footer from "./(sections)/Footer";
 import { LeftPane, RightPane } from "./components/LeftPane";
 import { Navbar } from "./components/Navbar";
 import "./globals.css"
@@ -50,6 +51,7 @@ const RootLayout = ({ children }) => {
           </div>
           <RightPane />
         </div>
+        <Footer/>
       </body>
 
       {/* <Analytics></Analytics>
