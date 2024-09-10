@@ -27,7 +27,16 @@ const ProjectsSection = () => {
         <div className="flex gap-1 items-center">
           <p className="text-Green font-sf-mono text-md">02.</p>
           <p className="font-calibre font-bold text-LightestSlate text-3xl">
-            Things I've Worked On
+            Things
+          </p>
+          <p className="font-calibre font-bold text-LightestSlate text-3xl">
+            I've
+          </p>
+          <p className="font-calibre font-bold text-LightestSlate text-3xl">
+            Worked
+          </p>
+          <p className="font-calibre font-bold text-LightestSlate text-3xl">
+            On
           </p>
         </div>
         <div className="w-full ms-5 h-[1px] bg-LightestSlate"></div>
@@ -93,33 +102,59 @@ const ProjectsSection = () => {
         Other projects
         <div className="w-1/4 h-[0.5px] bg-Slate"></div>
       </div>
-      <div className="w-full flex flex-col gap-8 mt-12">
-        <motion.div variants={cardVariants} initial="hidden" animate="visible" className="flex flex-col gap-8">
+      <div className="w-full flex flex-col gap-5 mt-12">
+        <motion.div
+          variants={cardVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5"
+        >
           <ProjectCard
             cardTitle="My portfolio"
             cardDescription="A personal portfolio application built using Next.js and hosted on Vercel."
-            technologies={["Next.js", "Vercel", "Framer motion", "Responsive"]}
+            technologies={["Next.js", "Vercel", "Framer", "Responsive"]}
+            githubLink="#"
+          />
+
+          <ProjectCard
+            cardTitle="Car Price Predictor Model"
+            cardDescription="A Random Forest Model for the car price predictor project mentioned above. It is create using about 15k adds from olx.ba"
+            technologies={["Python", "Jupyter", "Colab", "RFModel"]}
             githubLink="#"
           />
           <ProjectCard
             cardTitle="Car Price Predictor Model"
             cardDescription="A Random Forest Model for the car price predictor project mentioned above. It is create using about 15k adds from olx.ba"
-            technologies={["Python", "Jupyter", "Google colab", "Random forest"]}
+            technologies={["Python", "Jupyter", "Colab", "RFModel"]}
             githubLink="#"
           />
+
+          <div className="xl:hidden">
+            <ProjectCard
+              cardTitle="Car Price Predictor Model"
+              cardDescription="A Random Forest Model for the car price predictor project mentioned above. It is create using about 15k adds from olx.ba"
+              technologies={["Python", "Jupyter", "Colab", "RFModel"]}
+              githubLink="#"
+            />
+          </div>
         </motion.div>
 
         <AnimatePresence>
-          
           {showAllProjects && (
-            <>
+            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
               <motion.div
                 variants={cardVariants}
                 initial="hidden"
                 animate="visible"
                 exit={{ opacity: 0, y: -20, transition: { duration: 0.5 } }}
+                className="hidden xl:block"
               >
-                <ProjectCard />
+                <ProjectCard
+                  cardTitle="Car Price Predictor Model"
+                  cardDescription="A Random Forest Model for the car price predictor project mentioned above. It is create using about 15k adds from olx.ba"
+                  technologies={["Python", "Jupyter", "Colab", "RFModel"]}
+                  githubLink="#"
+                />
               </motion.div>
               <motion.div
                 variants={cardVariants}
@@ -137,7 +172,15 @@ const ProjectsSection = () => {
               >
                 <ProjectCard />
               </motion.div>
-            </>
+              <motion.div
+                variants={cardVariants}
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 0, y: -20, transition: { duration: 0.5 } }}
+              >
+                <ProjectCard />
+              </motion.div>
+            </div>
           )}
         </AnimatePresence>
 

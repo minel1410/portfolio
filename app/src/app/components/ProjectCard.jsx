@@ -7,10 +7,13 @@ const ProjectCard = ({
   cardDescription,
   githubLink = "#",
   hostedLink,
-  technologies = []
+  technologies = [],
+  classname=""
 }) => {
     return (
-      <div className="bg-[#112240] w-full shadow-lg h-72 p-8 flex flex-col group justify-between hover:-translate-y-3 transition-all duration-300 cursor-pointer">
+      <div
+  className={`bg-[#112240] shadow-lg h-80 p-8 flex flex-col group justify-between hover:-translate-y-3 transition-transform duration-300 cursor-pointer ${classname}`}
+>
         <div className="flex w-full justify-between items-center">
           <FeatherIcon
             icon="folder"
@@ -44,7 +47,7 @@ const ProjectCard = ({
             {cardDescription}
           </p>
         </div>
-        <div className="text-sm font-sf-mono text-Slate flex gap-5">
+        <div className="text-[10px] font-sf-mono text-Slate flex gap-x-5 flex-wrap">
           {technologies.map((tech, index) => (
             <p key={index}>{tech}</p>
           ))}
