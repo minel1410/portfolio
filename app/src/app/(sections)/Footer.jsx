@@ -25,7 +25,7 @@ const Footer = () => {
               Minel Salihagić
             </Link>
           </p>
-          <p>
+          {/* <p>
             Designed borrowed from{" "}
             <Link
               href={"#"}
@@ -33,7 +33,7 @@ const Footer = () => {
             >
               Brittany Chaing
             </Link>
-          </p>
+          </p> */}
         </div>
       </footer>
     );

@@ -9,10 +9,12 @@ const ContactSection = () => {
           Get In Touch
         </p>
         <p className="font-calibre text-2xl text-LightSlate px-8">
-          Although I’m not currently looking for any new opportunities, my inbox
-          is always open. Whether you have a question or just want to say hi,
-          I’ll try my best to get back to you!
+          As a final-year student passionate about software engineering, I am
+          eager to demonstrate my abilities and take on new challenges. I would
+          love to connect and explore opportunities where I can contribute and
+          grow. Please feel free to reach out!
         </p>
+
         <div className="relative mt-5 w-full flex justify-center group">
           <div className="group-hover:-translate-x-1 group-hover:-translate-y-1 transition-all absolute z-10 px-8 py-4 border border-Green rounded-md bg-Navy font-sf-mono text-Green">
             Contact me
