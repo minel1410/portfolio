@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import {  motion } from "framer-motion";
+import { motion } from "framer-motion";
 import Hexagon from "./Hexagon";
 import Sidebar from "./Sidebar";
 import HamburgerIcon from "./HamburgerIcon";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [sidebarActive, setSidebarActive] = useState(false)
+  const [sidebarActive, setSidebarActive] = useState(false);
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -21,6 +21,12 @@ const Navbar = () => {
       setShow(true);
     }
     setLastScrollY(currentScrollY);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      setSidebarActive(!sidebarActive);
+    }
   };
 
   useEffect(() => {
@@ -59,25 +65,18 @@ const Navbar = () => {
             transition={{ duration: 0.2, delay: 0 }}
             viewport={{ once: true, amount: 0.1 }}
           >
-            <Link href={'#aboutme'} className="flex">
+            <Link
+              href={"#aboutme"}
+              aria-label="About me section"
+              className="flex"
+            >
               <p className="text-Green">01.</p>
               <p className="text-LightestSlate group-hover:text-Green transition-all">
                 About
               </p>
             </Link>
           </motion.div>
-          <motion.div
-            className="text-sm flex items-center gap-2 group hover:cursor-pointer"
-            initial={{ opacity: 0, y: -35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2, delay: 0.1 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-Green">01.</p>
-            <p className="text-LightestSlate group-hover:text-Green transition-all">
-              About
-            </p>
-          </motion.div>
+
           <motion.div
             className="text-sm flex items-center gap-2 group hover:cursor-pointer"
             initial={{ opacity: 0, y: -35 }}
@@ -85,10 +84,16 @@ const Navbar = () => {
             transition={{ duration: 0.2, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <p className="text-Green">01.</p>
-            <p className="text-LightestSlate group-hover:text-Green transition-all">
-              About
-            </p>
+            <Link
+              href={"#projects"}
+              aria-label="Projects section"
+              className="flex"
+            >
+              <p className="text-Green">02.</p>
+              <p className="text-LightestSlate group-hover:text-Green transition-all">
+                Projects
+              </p>
+            </Link>
           </motion.div>
           <motion.div
             className="text-sm flex items-center gap-2 group hover:cursor-pointer"
@@ -97,10 +102,16 @@ const Navbar = () => {
             transition={{ duration: 0.2, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <p className="text-Green">01.</p>
-            <p className="text-LightestSlate group-hover:text-Green transition-all">
-              About
-            </p>
+            <Link
+              href={"#contact"}
+              aria-label="Conact section"
+              className="flex"
+            >
+              <p className="text-Green">03.</p>
+              <p className="text-LightestSlate group-hover:text-Green transition-all">
+                Contact
+              </p>
+            </Link>
           </motion.div>
           <motion.div
             className="p-2 border rounded-md border-Green transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:-translate-x-1 hover:shadow-[5px_5px_0px_0px_rgba(100,255,218,1)] cursor-pointer"
@@ -119,16 +130,22 @@ const Navbar = () => {
             </Link>
           </motion.div>
         </div>
+
+        {/* Hamburger Icon for Mobile Navigation */}
         <HamburgerIcon
           active={sidebarActive}
           onclick={() => setSidebarActive(!sidebarActive)}
-        ></HamburgerIcon>
-        <Sidebar active={sidebarActive}></Sidebar>
+          onKeyDown={handleKeyDown}
+          tabIndex={0} // Make it focusable
+          aria-label="Toggle sidebar menu"
+          role="button"
+        />
+
+        {/* Sidebar for Mobile */}
+        <Sidebar active={sidebarActive} />
       </nav>
     </>
   );
 };
-
-
 
 export { Navbar };
