@@ -12,17 +12,17 @@ const FeaturedProjectCard = ({
 }) => {
   return (
     <div className="relative w-full group hover:cursor-pointer">
-      <div className="h-full w-1/2 absolute right-0 top-0 z-0 bg-center bg-contain bg-no-repeat">
+      <div className="w-1/2 absolute right-0 top-0 h-full z-0">
         <div className="h-full relative">
-          <div className="h-full flex w-full items-center relative transition-all z-20">
+          <div className="h-full flex w-full items-center justify-center relative transition-all z-20 overflow-clip">
             <Image
               src="/alumni.png"
               alt="Portfolio Image"
-              width={1000}
-              height={1000}
+              width={450}
+              height={450}
               className="rounded-md relative transition-all"
             />
-            <div className="hidden lg:absolute inset-0 bg-Green opacity-100 mix-blend-multiply group-hover:opacity-0 transition-all rounded-md"></div>
+            <div className="absolute inset-0 bg-Green opacity-100 mix-blend-multiply group-hover:opacity-0 transition-all"></div>
           </div>
         </div>
       </div>
