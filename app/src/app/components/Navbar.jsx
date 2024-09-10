@@ -54,7 +54,12 @@ const Navbar = () => {
           transition={{ duration: 0.2, delay: 0 }}
           viewport={{ once: true, amount: 0.1 }}
         >
-          <Hexagon />
+          <Link
+            href={"#"}
+            aria-label="Landing page"
+          >
+            <Hexagon />
+          </Link>
         </motion.div>
 
         <div className="gap-7 items-center font-sf-mono text-Green hidden md:flex">
