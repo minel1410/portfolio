@@ -35,6 +35,12 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <meta name="title" content="Minel Salihagić"/>
+<meta name="description" content="Welcome to the official website of Minel Salihagić, a Software Developer specializing in web development and software engineering. Explore projects, skills, and contact information."/>
+<meta name="keywords" content="Software Developer, Web Development, Embedded Systems, React, Tailwind CSS, Next.js, Minel Salihagić, Portfolio"/>
+
+      </head>
       <body>
         <Navbar />
         <div className="flex bg-Navy">
