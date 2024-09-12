@@ -126,7 +126,7 @@ const Navbar = () => {
             viewport={{ once: true, amount: 0.1 }}
           >
             <Link
-              href="/resume.pdf"
+              href="/Minel Salihagic's Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="My Resume"

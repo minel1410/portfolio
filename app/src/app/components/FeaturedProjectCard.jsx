@@ -13,8 +13,8 @@ const FeaturedProjectCard = ({
   return (
     <div className="relative w-full group hover:cursor-pointer">
       <div className="w-1/2 absolute right-0 top-0 h-full z-0">
-        <div className="h-full relative">
-          <div className="h-full flex w-full items-center justify-center relative transition-all z-20 overflow-clip">
+        <div className="h-full relative shadow-lg rounded-lg">
+          <div className="shadow-lg rounded-lg h-full flex w-full items-center justify-center relative transition-all z-20 overflow-clip">
             <Image
               src="/alumni.png"
               alt="Portfolio Image"
