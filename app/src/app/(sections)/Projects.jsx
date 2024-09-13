@@ -41,7 +41,7 @@ const ProjectsSection = () => {
         </div>
         <div className="w-full ms-5 h-[1px] bg-LightestSlate"></div>
       </div>
-      <div className="flex flex-col mt-3 gap-16 w-full">
+      <div className="flex flex-col mt-3 gap-24 w-full">
         <FeaturedProjectCard
           cardTitle="Used Car Price Predictor"
           cardDescription="A used car price prediction tool using a Random Forest model trained on 15,000 OLX.ba car listings. Built with FastAPI for real-time price predictions. Please allow up to 2 minutes for the server to boot up."
@@ -62,14 +62,10 @@ const ProjectsSection = () => {
           cardDescription="An alumni platform for the Faculty of Natural Sciences and Mathematics Sarajevo, connecting graduates. Built with PostgreSQL, FastAPI, and Next.js, it allows alumni to register, update profiles, and network with peers."
           backgroundImage="/alumni.png"
           githubLink="https://github.com/minel1410/Pmf_alumni"
-          technologies={[
-            "Next.js",
-            "FastAPI",
-            "PostegreSQL",
-            "Aiven",
-            "Shadcn",
-          ]}
+          technologies={["Next.js", "FastAPI", "PostgreSQL", "Aiven", "Shadcn"]}
+          right={false}
         />
+
         <FeaturedProjectCard
           cardTitle="STM32 Firmware"
           cardDescription={
