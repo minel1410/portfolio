@@ -1,7 +1,7 @@
 import Footer from "./(sections)/Footer";
 import { LeftPane, RightPane } from "./components/Panels";
 import { Navbar } from "./components/Navbar";
-import "./globals.css"
+import "./globals.css";
 
 export const metadata = {
   title: "Minel Salihagić",
@@ -28,18 +28,22 @@ export const metadata = {
     site_name: "Minel Salihagić Portfolio",
   },
 
-  favicon: "https://minelsalihagic.com/favicon.ico"
+  favicon: "https://minelsalihagic.com/favicon.ico",
 };
-
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta name="title" content="Minel Salihagić"/>
-<meta name="description" content="Welcome to the official website of Minel Salihagić, a Software Developer specializing in web development and software engineering. Explore projects, skills, and contact information."/>
-<meta name="keywords" content="Software Developer, Web Development, Embedded Systems, React, Tailwind CSS, Next.js, Minel Salihagić, Portfolio"/>
-
+        <meta name="title" content="Minel Salihagić" />
+        <meta
+          name="description"
+          content="Welcome to the official website of Minel Salihagić, a Software Developer specializing in web development and software engineering. Explore projects, skills, and contact information."
+        />
+        <meta
+          name="keywords"
+          content="Software Developer, Web Development, Embedded Systems, React, Tailwind CSS, Next.js, Minel Salihagić, Portfolio"
+        />
       </head>
       <body>
         <Navbar />
