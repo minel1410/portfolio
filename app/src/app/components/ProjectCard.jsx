@@ -5,15 +5,15 @@ import FeatherIcon from "feather-icons-react";
 const ProjectCard = ({
   cardTitle,
   cardDescription,
-  githubLink = "#",
+  githubLink,
   hostedLink,
   technologies = [],
   classname=""
 }) => {
     return (
       <div
-  className={`bg-[#112240] shadow-lg h-80 p-8 flex flex-col group justify-between hover:-translate-y-3 transition-transform duration-300 cursor-pointer ${classname}`}
->
+        className={`bg-[#112240] shadow-lg h-80 p-8 flex flex-col group justify-between ${classname}`}
+      >
         <div className="flex w-full justify-between items-center">
           <FeatherIcon
             icon="folder"
@@ -21,13 +21,15 @@ const ProjectCard = ({
             className="text-Green w-12 h-12"
           />
           <div className="flex gap-3 items-center">
-            <Link href={githubLink} target="_blank" rel="noopener noreferrer">
-              <FeatherIcon
-                icon="github"
-                strokeWidth="2"
-                className="text-LightestSlate hover:text-Green transition-all"
-              />
-            </Link>
+            {githubLink && (
+              <Link href={githubLink} target="_blank" rel="noopener noreferrer">
+                <FeatherIcon
+                  icon="github"
+                  strokeWidth="2"
+                  className="text-LightestSlate hover:text-Green transition-all"
+                />
+              </Link>
+            )}
             {hostedLink && (
               <Link href={hostedLink} target="_blank" rel="noopener noreferrer">
                 <FeatherIcon

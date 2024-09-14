@@ -8,7 +8,7 @@ const AboutSection = () => {
       <motion.section
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true, amount: 0.1 }}
         id="aboutme"
         className="h-screen flex flex-col pt-8 md:flex-row md:justify-between md:gap-12 mb-28"
