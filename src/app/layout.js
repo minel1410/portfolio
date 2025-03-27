@@ -1,6 +1,7 @@
 import Footer from "./_sections/Footer";
 import { LeftPane, RightPane } from "./components/Panels";
 import { Navbar } from "./components/Navbar";
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata = {
@@ -31,11 +32,15 @@ export const metadata = {
   favicon: "https://minelsalihagic.com/favicon.ico",
 };
 
+
+
 const RootLayout = ({ children }) => {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta name="title" content="Minel Salihagić" />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Minel Salihagić</title>
         <meta
           name="description"
           content="Welcome to the official website of Minel Salihagić, a Software Developer specializing in web development and software engineering. Explore projects, skills, and contact information."
@@ -44,8 +49,39 @@ const RootLayout = ({ children }) => {
           name="keywords"
           content="Software Developer, Web Development, Embedded Systems, React, Tailwind CSS, Next.js, Minel Salihagić, Portfolio"
         />
+        <meta property="og:title" content="Minel Salihagić" />
+        <meta
+          property="og:description"
+          content="Explore projects, skills, and contact information of Minel Salihagić, a Software Developer."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://minelsalihagic.com" />
+        <meta
+          property="og:image"
+          content="https://minelsalihagic.com/preview.jpg"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Minel Salihagić" />
+        <meta
+          name="twitter:description"
+          content="Explore projects, skills, and contact information of Minel Salihagić."
+        />
       </head>
       <body className="overflow-x-hidden">
+        {/* Google Analytics Script */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-X2PRF0BS94"
+        />
+        <Script id="google-analytics">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-X2PRF0BS94');
+          `}
+        </Script>
+
         <Navbar />
         <div className="flex bg-Navy">
           <LeftPane />
